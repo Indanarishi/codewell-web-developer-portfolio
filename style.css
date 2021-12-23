@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #0a0a0b;
+    --secondary-color: #2E3038;
+    --button-color: #FBE850;
+    --text-color: #9D9D9F;
+
+    --primary-font: 'Playfair Display', serif;
+    --secondary-font: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    background-color: var(--button-color);
+    color: #000;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 130px;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 100;
+}
+
+#navbar .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar .container .navbar-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+
+#navbar .navbar-hamburger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#open-btn,
+#close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#navbar .navbar-links ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar .navbar-links ul li {
+    padding: 10px 15px;
+}
+
+#navbar .navbar-links ul li a {
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+}
+
+#navbar .navbar-links ul li a:hover {
+    color: #fff;
+}
+
+#navbar .btn:hover {
+    transform: scale(0.98);
+}
+
+#showcase {
+    margin-top: 129px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding-bottom: 70px;
+}
+
+#showcase .showcase-title {
+    color: #fff;
+    font-family: var(--primary-font);
+    font-size: 3.5rem;
+    font-weight: 400;
+    width: 60%;
+}
+
+#showcase .showcase-subtitle {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    width: 60%;
+    margin: 10px 0 10px;
+}
+
+#showcase .showcase-companies {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 70px 0;
+    width: 100%;
+}
+
+#showcase .showcase-companies img {
+    margin: 0 auto;
+}
+
+#showcase .showcase-websites {
+    display: flex;
+    gap: 40px;
+}
+
+#showcase .showcase-websites .showcase-website {
+    text-align: start;
+}
+
+#showcase .showcase-websites .showcase-website a {
+    font-size: 3rem;
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    margin: 10px 0;
+    text-decoration: none;
+    display: block;
+    transition: all .3s ease-in;
+}
+
+#showcase .showcase-websites .showcase-website a i {
+    font-size: 2.5rem;
+    margin-left: 10px;
+    transition: all .3s ease-in;
+    transform: translateX(0);
+}
+
+#showcase .showcase-websites .showcase-website a:hover {
+    transform: translateX(5px);
+    opacity: 0.98;
+}
+
+#showcase .showcase-websites .showcase-website a:hover i {
+    transform: translateX(5px);
+}
+
+#showcase .showcase-websites .showcase-website p {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    line-height: 1.4;
+}
+
+#communities {
+    width: 100%;
+    height: 500px;
+    background-color: var(--secondary-color);
+}
+
+#communities .container {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+}
+
+#communities .communities-title {
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 2.3rem;
+}
+
+#communities p {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+#communities .right-column p {
+    margin: 25px 0;
+}
+
+#communities .right-column p:first-child {
+    margin-top: 0;
+}
+
+#contact {
+    width: 100%;
+    height: 360px;
+    background-color: var(--primary-color);
+}
+
+#contact .container {
+    padding: 50px 0;
+}
+
+#contact .contact-title {
+    font-size: 2.3rem;
+    color: #fff;
+    font-family: var(--primary-font);
+    font-weight: 400;
+}
+
+#contact p {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: var(--secondary-font);
+    line-height: 1.4;
+    margin: 15px 0;
+    width: 50%;
+}
+
+#contact .btn:hover {
+    transform: scale(0.98);
+}
+
+#footer {
+    width: 100%;
+    height: 72px;
+    background-color: var(--secondary-color);
+}
+
+#footer .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .footer-logo a {
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+}
+
+#footer .footer-social a {
+    padding: 7px;
+    background-color: #fff;
+    color: var(--secondary-color);
+    border-radius: 50%;
+    font-size: .8rem;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    #navbar {
+        height: 100px;
+    }
+    #navbar .navbar-hamburger {
+        display: block;
+        margin-right: 25px;
+    }
+    #close-btn {
+        display: none;
+    }
+    #navbar .navbar-links,
+    #navbar .navbar-btn {
+        position: absolute;
+        top: -200px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding-left: 55px;
+        transition: all .3s ease;
+    }
+    #navbar .navbar-btn {
+        top: -270px;
+        padding: 20px 0 30px;
+        margin-top: -11px;
+    }
+    #navbar.show .navbar-links {
+        top: 100px;
+    }
+    #navbar.show .navbar-btn {
+        top: 270px;
+    }
+    #navbar.show #open-btn {
+        display: none;
+    }
+    #navbar.show #close-btn {
+        display: block;
+    }
+    #navbar .navbar-btn .btn {
+        margin-left: 70px;
+    }
+    #navbar .navbar-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #showcase {
+        margin-top: 99px;
+        width: 100%;
+    }
+    #showcase .showcase-title,
+    #showcase .showcase-subtitle {
+        width: 100%;
+    }
+    #showcase .showcase-websites {
+        flex-direction: column;
+    }
+    #showcase .showcase-companies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    #showcase .showcase-companies img {
+        margin: 0 auto;
+    }
+    #showcase .showcase-websites {
+        gap: 60px;
+    }
+    #showcase .showcase-websites img {
+        width: 100%;
+    }
+    #showcase .showcase-websites .showcase-website a {
+        font-size: 2.5rem;
+    }
+    #showcase .showcase-websites .showcase-website a i {
+        font-size: 2rem;
+    }
+
+    #communities {
+        height: auto;
+    }
+    #communities .container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    #contact .container {
+        padding: 50px 0 20px;
+    }
+    #contact p {
+        width: 81%;
+    }
+
+    #footer .footer-social a {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 425px) {
+    #showcase .showcase-title {
+        font-size: 2.5rem;
+    }
+    #showcase .showcase-subtitle {
+        font-size: 1.3rem;
+    }
+
+    #showcase .showcase-companies {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #showcase .showcase-websites .showcase-website p {
+        font-size: 1.2rem;
+    }
+
+    #contact {
+        height: auto;
+    }
+    #contact .container {
+        padding: 70px 0;
+    }
+    #contact p {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+}
